@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button, Input, RTE, Select } from "../index";
 import appwriteService from "../../services/appwrite/postService";
-import postService from "@/services/appwrite/postService";
 import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../store/hooks";
 import extractYouTubeThumbnail from "../../utils/ExtractYouTubeThmbnail";
@@ -47,7 +46,6 @@ export default function PostForm({ post }: PostFormProps) {
     register,
     handleSubmit,
     control,
-    watch,
     setValue,
     getValues,
     formState: { errors },

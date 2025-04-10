@@ -35,7 +35,7 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
     return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
   };
 
-  const embedUrl = getYouTubeEmbedUrl(post.youtubeUrl);
+  // const embedUrl = getYouTubeEmbedUrl(post.youtubeUrl);
   console.log("Embed URL:", post.imageUrl);
   console.log("Embed After StorageSeervice:", storageService.getFilePreview(post.imageUrl? post.imageUrl : ""));
 
