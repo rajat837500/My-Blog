@@ -22,6 +22,7 @@ const RTE: React.FC<RTEProps> = ({ name, control, label, defaultValue = "" }) =>
             apiKey="7s93scrdpl7xjxsho220gexc35sleyln54mp2pj0tt0jjvww"
             initialValue={defaultValue}
             init={{
+              initialValue: defaultValue,
               height: 500,
               menubar: true,
               plugins: [

@@ -131,11 +131,12 @@ export default function PostForm({ post }: PostFormProps) {
         />
         {errors.title && <p className="text-red-500">{errors.title.message}</p>}
 
-        <Controller
+        {/* <Controller
           name="content"
           control={control}
-          render={({ field }) => <RTE label="Content :" control={control} {...field} />}
-        />
+          render={({ field }) => <RTE label="Content :" control={control} defaultValue={getValues('content')} {...field} />}
+        /> */}
+        <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
         {errors.content && <p className="text-red-500">{errors.content.message}</p>}
       </div>
 
